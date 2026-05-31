@@ -30,4 +30,16 @@ public class Ordinateur extends Equipement {
     public int getRam() { return ram; }
     public int getStockage() { return stockage; }
     public String getTypeOS() { return typeOS; }
+
+    @Override
+    public double calculerValeurActuelle(){
+        int age = calculerAge();
+        double remise;
+    double valeur = getPrixAchat();
+        for (int i = 0; i < age; i++){
+            remise = valeur * 0.25;
+            valeur -= remise;
+        }
+        return valeur;
+    }
 }

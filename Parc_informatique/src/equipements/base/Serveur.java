@@ -38,5 +38,17 @@ public class Serveur extends Equipement {
                 ']';
     }
 
+    @Override
+    public double calculerValeurActuelle(){
+        int age = calculerAge();
+        double remise;
+        double valeur = getPrixAchat();
+        for (int i = 0; i < age; i++){
+            remise = valeur * 0.15;
+            valeur -= remise;
+        }
+        return valeur;
+    }
+
 
 }

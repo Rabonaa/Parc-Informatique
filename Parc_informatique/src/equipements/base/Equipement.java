@@ -75,6 +75,16 @@ public class Equipement {
         return "EQ-" + anneeAchat + "-" + numeroSerie;
     }
 
+    public double calculerValeurActuelle(){
+        int age = calculerAge();
+        double remise;
+        double valeur = prixAchat;
+        for (int i = 0; i < age; i++){
+            remise = valeur * 0.2;
+            valeur -= remise;
+        }
+        return valeur;
+    }
 
 
 
