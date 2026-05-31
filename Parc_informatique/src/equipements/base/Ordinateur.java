@@ -52,8 +52,8 @@ public class Ordinateur extends Equipement {
                 ", ram=" + ram + "Go" +
                 ", stockage=" + stockage + "Go" +
                 ", OS='" + typeOS + '\'' +
-                ']' + "Peripheriques connectes : " + (ecran!=null ? " ecran = " + ecran : " ") +
-                (clavier!=null ? " clavier = " + clavier : " ") +
-                (souris!=null ? " souris = " + souris : " ");
+                ']' + " Peripheriques connectes : " + (ecran!=null ? " ecran : " + ecran : " ") +
+                (clavier!=null ? " clavier : " + clavier : " ") +
+                (souris!=null ? " souris : " + souris : " ");
     }
 }
