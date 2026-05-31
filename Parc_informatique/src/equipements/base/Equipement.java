@@ -6,7 +6,7 @@ public class Equipement {
     private String marque;
     private String modele;
     private String numeroSerie;
-    private double prixAchat;
+    protected double prixAchat;
     private int anneeAchat;
     private static int anneeCourante = Year.now().getValue();
 
@@ -84,6 +84,11 @@ public class Equipement {
             valeur -= remise;
         }
         return valeur;
+    }
+
+    protected void appliquerRemise(double pourcentage){
+        double coef = 1 - pourcentage/100;
+        this.prixAchat *= coef;
     }
 
 
