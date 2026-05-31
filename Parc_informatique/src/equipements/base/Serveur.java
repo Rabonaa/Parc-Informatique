@@ -15,6 +15,7 @@ public class Serveur extends Equipement {
         this.capaciteStockage = capaciteStockage;
         this.systemeRaid = systemeRaid;
         this.estEnProduction = estEnProduction;
+        System.out.println("Serveur constructor");
     }
     public void demarrer(){
         this.estEnProduction = true;

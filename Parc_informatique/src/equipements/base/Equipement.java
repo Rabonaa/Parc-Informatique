@@ -19,6 +19,8 @@ public class Equipement {
         if (anneeAchat >= 2000 && anneeAchat <= anneeCourante)
             this.anneeAchat = anneeAchat;
         else this.anneeAchat = anneeCourante;
+
+        System.out.println("Equipement constructor");
     }
 
     public String getMarque(){
@@ -51,6 +53,26 @@ public class Equipement {
                 ", prixAchat=" + prixAchat +
                 ", anneeAchat=" + anneeAchat +
                 ']';
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        if (this == obj)
+            return true;
+        if ( obj == null || getClass() != obj.getClass())
+            return false;
+
+        Equipement equipement = (Equipement) obj;
+        return numeroSerie.equals(equipement.numeroSerie);
+    }
+
+    @Override
+    public int hashCode(){
+        return numeroSerie.hashCode();
+    }
+
+    public final String genererCodeInventaire () {
+        return "EQ-" + anneeAchat + "-" + numeroSerie;
     }
 
 

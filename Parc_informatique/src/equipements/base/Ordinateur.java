@@ -12,6 +12,7 @@ public class Ordinateur extends Equipement {
         this.ram = ram;
         this.stockage = stockage;
         this.typeOS = typeOS;
+        System.out.println("Ordinateur constructor");
     }
     public boolean verifierConfigMinimale(int ramMin, int stockageMin) {
         return this.ram >= ramMin && this.stockage >= stockageMin;
